@@ -1,7 +1,12 @@
 # BinventionProcessor1.0
  My own implimentation of a basic pipelined processor
 
-This is currently a work in progress and does not work. I have split the project into 3 different parts:
+This is currently a work in progress. The functionality is as follows.
+
+Basic Single Instruction Single Stage Processor is working fully.
+Golden Code for the Basic Processor is working fully.
+Pipelined processor is not yet complete
+Assembler is not yet complete.
 
 Compiler -- this will be a C++ based assembler that will take the assembly code and create a binary file for execution
 Golden Code -- this will be a C++ based simulator that should perform the same function as the processor in order to validate performance
