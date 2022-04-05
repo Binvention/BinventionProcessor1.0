@@ -1,5 +1,5 @@
 # BinventionProcessor1.0
- My own implimentation of a basic pipelined processor
+ My own implementation of a basic pipelined processor
 
 This is currently a work in progress. The functionality is as follows.
 
