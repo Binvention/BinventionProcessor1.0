@@ -40,7 +40,7 @@ module Processor (
    assign byte4 = instruction[7:0];
    //define wires for execute stage to attach to later
    wire [3:0] writeAddr;
-   wire WE;
+   wire regWE;
    //extract operation data
    wire [1:0] op;
    wire [1:0] opArg;
