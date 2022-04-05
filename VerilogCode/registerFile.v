@@ -1,10 +1,9 @@
-
 module RegFile (
-   input [3:0] addrA, addrB, addrW
+   input [3:0] addrA, addrB, addrW,
    input [31:0] dataIn,
    input WE,
    input clk,
-   output [32:0] A,B
+   output [31:0] A,B
 );
    
    //32 x 16 register file 
@@ -15,7 +14,7 @@ module RegFile (
 
    always @(posedge clk) begin
       if(WE) begin
-         regfile[wAddr] <= dataIn;
+         regfile[addrW] <= dataIn;
       end
    end
 
