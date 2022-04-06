@@ -22,12 +22,6 @@ module Processor (
       fNegative = 0;
    end
 
-   always @(reset) begin
-      pc = 0;
-      fZero = 0;
-      fNegative = 0;
-   end
-
    //Fetch
    assign instructionAddress = pc;
 
@@ -110,9 +104,16 @@ module Processor (
 
    //main control block
    always @(posedge clk) begin
-      pc <= nPC;
-      fZero <= nFZ;
-      fNegative <= nFN;
+      if (reset) begin
+         pc <= 0;
+         fZero <= 0;
+         fNegative <= 0;
+      end
+      else begin
+         pc <= nPC;
+         fZero <= nFZ;
+         fNegative <= nFN;
+      end
    end
 
 endmodule
